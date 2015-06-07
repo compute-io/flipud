@@ -25,12 +25,33 @@
   "keywords": [
     "compute.io",
     "compute",
-    "computation"
+    "computation",
+    "mathematics",
+    "math",
+    "matrix",
+    "matrices",
+    "data structure",
+    "dstructs",
+    "flip",
+    "flipud",
+    "reflect",
+    "linear",
+    "algebra",
+    "transform",
+    "linear algebra",
+    "array",
+    "arrays",
+    "rearrange"
   ],
   "bugs": {
     "url": "https://github.com/compute-io/flipud/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "compute-array-constructors": "^1.0.0",
+    "validate.io-boolean-primitive": "^1.0.0",
+    "validate.io-matrix-like": "^1.0.2",
+    "validate.io-object": "^1.0.4"
+  },
   "devDependencies": {
     "chai": "3.x.x",
     "mocha": "2.x.x",

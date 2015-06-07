@@ -2,7 +2,7 @@ flipud
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
-> Flips a matrix from top-to-bottom.
+> Flips a [matrix](https://github.com/dstructs/matrix) from top-to-bottom.
 
 
 ## Installation
@@ -17,18 +17,81 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 ## Usage
 
 ``` javascript
-var foo = require( 'compute-flipud' );
+var flipud = require( 'compute-flipud' );
 ```
 
-#### foo( arr )
+#### flipud( x[, opts] )
 
-What does this function do?
+Flips a [matrix](https://github.com/dstructs/matrix) from top-to-bottom.
+
+``` javascript
+var matrix = require( 'dstructs-matrix' );
+
+var mat = matrix( [2,3] );
+mat.set( 1, 0, 1 )
+	.set( 0, 1, 2 )
+	.set( 1, 2, 3 );
+/*
+	[ 0 2 0
+	  1 0 3 ]
+*/
+
+var ud = flipud( mat );
+/*
+	[ 1 0 3
+	  0 2 0 ]
+*/
+```
+
+By default, the function returns a new [matrix](https://github.com/dstructs/matrix) instance. To mutate the input [matrix](https://github.com/dstructs/matrix), set the `copy` option to `false`.
+
+``` javascript
+var ud = flipud( mat, {
+	'copy': false
+});
+/*
+	[ 1 0 3
+	  0 2 0 ]
+*/
+
+var bool = ( mat === ud );
+// returns true
+```
+
 
 
 ## Examples
 
 ``` javascript
-var foo = require( 'compute-flipud' );
+var matrix = require( 'dstructs-matrix' ),
+	flipud = require( 'compute-flipud' );
+
+var data,
+	mat,
+	ud, i;
+
+data = new Int8Array( 10 );
+for ( i = 0; i < data.length; i++ ) {
+	data[ i ] = i;
+}
+
+mat = matrix( data, [5,2], 'int8' );
+/*
+	[ 0 1
+	  2 3
+	  4 5
+	  6 7
+	  8 9 ]
+*/
+
+ud = flipud( mat );
+/*
+	[ 8 9
+	  6 7
+	  4 5
+	  2 3
+	  0 1 ]
+*/
 ```
 
 To run the example code from the top-level application directory,

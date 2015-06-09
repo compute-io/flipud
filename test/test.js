@@ -83,7 +83,7 @@ describe( 'compute-flipud', function tests() {
 		}
 	});
 
-	it( 'should flip a matrix from top-to-bottom', function test() {
+	it( 'should flip a matrix vertically', function test() {
 		var nRows,
 			nCols,
 			ud,

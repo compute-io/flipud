@@ -2,7 +2,7 @@ flipud
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
-> Flips a [matrix](https://github.com/dstructs/matrix) from top-to-bottom.
+> Flips a [matrix](https://github.com/dstructs/matrix) vertically.
 
 
 ## Installation
@@ -22,7 +22,7 @@ var flipud = require( 'compute-flipud' );
 
 #### flipud( x[, opts] )
 
-Flips a [matrix](https://github.com/dstructs/matrix) from top-to-bottom.
+Flips a [matrix](https://github.com/dstructs/matrix) vertically.
 
 ``` javascript
 var matrix = require( 'dstructs-matrix' );

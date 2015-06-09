@@ -1,7 +1,7 @@
 {
   "name": "compute-flipud",
   "version": "0.0.0",
-  "description": "Flips a matrix from top-to-bottom.",
+  "description": "Flips a matrix vertically.",
   "author": {
     "name": "Athan Reines",
     "email": "kgryte@gmail.com"
@@ -54,11 +54,12 @@
   },
   "devDependencies": {
     "chai": "3.x.x",
-    "mocha": "2.x.x",
     "coveralls": "^2.11.1",
+    "dstructs-matrix": "^2.0.0",
     "istanbul": "^0.3.0",
     "jshint": "2.x.x",
-    "jshint-stylish": "^1.0.0"
+    "jshint-stylish": "^1.0.0",
+    "mocha": "2.x.x"
   },
   "license": "MIT"
 }

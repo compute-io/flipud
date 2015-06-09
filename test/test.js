@@ -101,6 +101,19 @@ describe( 'compute-flipud', function tests() {
 				assert.strictEqual( ud.get( i, j ), mat.get( nRows-i-1, j ) );
 			}
 		}
+
+		// Flip the matrix horizontally and then flip...
+		mat = ud;
+		mat.strides[ 1 ] *= -1;
+		mat.offset = mat.length - 1;
+
+		ud = flipud( mat );
+
+		for ( i = 0; i < nRows; i++ ) {
+			for ( j = 0; j < nCols; j++ ) {
+				assert.strictEqual( ud.get( i, j ), mat.get( nRows-i-1, j ) );
+			}
+		}
 	});
 
 	it( 'should flip and mutate the input matrix', function test() {
@@ -124,6 +137,18 @@ describe( 'compute-flipud', function tests() {
 		for ( i = 0; i < nRows; i++ ) {
 			for ( j = 0; j < nCols; j++ ) {
 				assert.strictEqual( ud.get( i, j ), copy.get( nRows-i-1, j ) );
+			}
+		}
+
+		// Flip the matrix horizontally and then flip...
+		ud.strides[ 1 ] *= -1;
+		ud.offset = ud.length - 1;
+
+		ud = flipud( ud );
+
+		for ( i = 0; i < nRows; i++ ) {
+			for ( j = 0; j < nCols; j++ ) {
+				assert.strictEqual( ud.get( i, j ), copy.get( i, nCols-j-1 ) );
 			}
 		}
 	});

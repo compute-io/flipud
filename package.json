@@ -58,7 +58,7 @@
     "dstructs-matrix": "^2.0.0",
     "istanbul": "^0.3.0",
     "jshint": "2.x.x",
-    "jshint-stylish": "^1.0.0",
+    "jshint-stylish": "2.x.x",
     "mocha": "2.x.x"
   },
   "license": "MIT"

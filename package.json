@@ -1,6 +1,6 @@
 {
   "name": "compute-flipud",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Flips a matrix vertically.",
   "author": {
     "name": "Athan Reines",
